@@ -21,7 +21,7 @@ import org.apache.log4j.Logger;
 
 public class DefOutlineGap {
 	
-	static Logger  = Logger.getLologgger(DefOutlineGap.class.getName());
+	static Logger log  = Logger.getLogger(DefOutlineGap.class.getName());
 	
 	WebDriver driver = null;
 
@@ -50,6 +50,7 @@ public class DefOutlineGap {
 		JavascriptExecutor jse=(JavascriptExecutor) driver;
 		jse.executeScript("window.scrollBy(0,300)");
 		Thread.sleep(2000);
+	
 	}
 
 	@When("Choose to buy the second item")
@@ -137,7 +138,7 @@ public class DefOutlineGap {
 		//sendKeys(Keys.TAB);
 		driver.findElement(By.id("addressForm__phone")).sendKeys(FileReaderManager.getInstance().getJsonReader().getCustomergetMob());
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/main/div[2]/div[1]/div[3]/div[1]/section[2]/div/div[3]/button")).click();
-		driver.findElement(By.id("addressConfirm__confirm--button")).click();
+		//driver.findElement(By.id("addressConfirm__confirm--button")).click();
 		
 		
 	}
